@@ -23,6 +23,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 let copyHTML = document.importNode(template,true)
                 copyHTML.querySelector(".worker-name").textContent = workerArray[i].first_name + " " + workerArray[i].last_name
                 copyHTML.querySelector(".worker-email").textContent = workerArray[i].email
+                copyHTML.querySelector(".worker-avatar").src = workerArray[i].avatar
                 document.getElementById("worker-container").appendChild(copyHTML)
             }
 
