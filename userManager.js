@@ -6,6 +6,8 @@ user.userAge = 34
 
 // console.log(user)
 
+// FETCH API https://developer.mozilla.org/en-US/docs/Web/API/fetch
+
 function feedUsers () {
     // https://users.nik.uni-obuda.hu/siposm/db/people.json --> CORS problem, server is set like this...
     fetch('https://reqres.in/api/users')
@@ -51,4 +53,44 @@ function createUser () {
 // feedUser()
 // feedUser2()
 
-createUser()
+// createUser()
+
+// ******************************************************************************
+
+function displayUsers () {
+    fetch('https://reqres.in/api/users')
+        .then(res => res.json())
+        .then(data => {
+
+            console.log(data.data)
+
+            // cannot write nested HTML tags here!
+            // I have to query somehow the 'main' HTML element, and create new elements inside!
+
+            for (let i = 0; i < data.data.length; i++) {
+                let baseContainer = document.getElementById("userContainer")
+
+                let userContainer = document.createElement('div')
+                userContainer.className += "user-div"
+
+                let userData = document.createElement('p')
+
+                userData.innerText = data.data[i].first_name
+                userData.innerText += " "
+                userData.innerText += data.data[i].last_name
+
+                userContainer.appendChild(userData)
+
+                let userAvatar = document.createElement('img')
+
+                userAvatar.src = data.data[i].avatar
+
+                userContainer.appendChild(userAvatar)
+
+                baseContainer.appendChild(userContainer)
+            }
+
+        })
+}
+
+displayUsers()
