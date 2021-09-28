@@ -90,6 +90,9 @@ function displayUsers () {
                 baseContainer.appendChild(userContainer)
             }
 
+            // At this point we can feel that creating elements from JS is not the most convinient way...
+            // Better approach: create HTML layout before, and populate/feed it from JS.
+
         })
 }
 
