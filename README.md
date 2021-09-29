@@ -1,5 +1,9 @@
 # js-basics
 
+### 0. dev env
+- live server
+- webstorm
+
 ### I. fruits.js
 - [ ] include js az script to html
 
