@@ -1,5 +1,5 @@
 
-let workerArray = []
+export let workerArray = []
 
 // https://stackoverflow.com/questions/807878/how-to-make-javascript-execute-after-page-load?rq=1
 // https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event
