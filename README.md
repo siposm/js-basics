@@ -29,3 +29,4 @@
 ### IV. workerManager.js
 - [ ] index2.html --> template
 - [ ] use template from js
+- [ ] delete function (--> problem)
