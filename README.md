@@ -1,32 +1,32 @@
 # js-basics
 
-### 0. dev env
+### dev env
 - live server
 - webstorm
 
 ### I. fruits.js
-- [ ] include js az script to html
+- include js az script to html
 
 ### II. user.js
-- [ ] create User class and show export versions (js modules)
+- create User class and show export versions (js modules)
   - export default at the end
   - export with curly braces
   - export inline
-- [ ] add Cat to User
+- add Cat to User
 
 ### III. userManager.js
-- [ ] Fetch API READ
+- Fetch API (READ)
   - basic usage
   - 404 error
   - result checking
-- [ ] Fetch API CREATE
+- Fetch API (CREATE)
   - headers
   - body
   - JSON stringify
-- [ ] display users as complex exercise
+- display users as complex exercise
   - create elements from js
 
 ### IV. workerManager.js
-- [ ] index2.html --> template
-- [ ] use template from js
-- [ ] delete function (--> problem)
+- index2.html --> template
+- use template from js
+- delete function (--> problem)
