@@ -17,7 +17,7 @@ function feedUsers () {
 
 function feedUser () {
     // fetch always succeeds, even on 404 --> nothing to catch
-    fetch('https://reqres.in/api/users/23')
+    fetch('https://reqres.in/api/users/23') // ID 5 is ok, ID 23 is not
         .then(res => res.json())
         .then(data => console.log(data))
         .catch(error => console.log(error))
@@ -25,10 +25,13 @@ function feedUser () {
 
 function feedUser2 () {
     // we have to write 'logic' to handle
-    fetch('https://reqres.in/api/users/23')
+    fetch('https://reqres.in/api/users/5') // ID 5 success --> data is displayed, ID 23 error --> no data (undefined)
         .then(res => {
           if(res.ok) // HTTP status codes lvl 200
+          {
               console.log("SUCCESS")
+              return res.json()
+          }
           else
               console.log("FAIL")
         })
@@ -51,7 +54,7 @@ function createUser () {
 
 // feedUsers()
 // feedUser()
-// feedUser2()
+feedUser2()
 
 // createUser()
 
@@ -64,7 +67,7 @@ function displayUsers () {
 
             console.log(data.data)
 
-            // cannot write nested HTML tags here!
+            // cannot write nested HTML tags here, meaning <h1>data.data[i].first_name</h1>
             // I have to query somehow the 'main' HTML element, and create new elements inside!
 
             for (let i = 0; i < data.data.length; i++) {
@@ -96,4 +99,4 @@ function displayUsers () {
         })
 }
 
-displayUsers()
+// displayUsers()
